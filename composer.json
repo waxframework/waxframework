@@ -1,0 +1,56 @@
+{
+    "name": "waxframework/waxframework",
+    "description": "Wordpress plugin framework",
+    "license": "MIT",
+    "scripts": {
+        "generate": [
+			"composer install --no-cache",
+			"composer bin php-scoper require --dev humbug/php-scoper:0.17.5"
+		],
+        "scoper-init": "vendor-src/bin/php-scoper",
+        "add-prefix": [
+			"vendor-src/bin/php-scoper add-prefix --output-dir vendor --force",
+            "composer dump-autoload -d vendor"
+		]
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "./../app/",
+            "Bootstrap\\": "./../bootstrap/",
+            "Database\\": "./../database/"
+        },
+        "files": [
+            "./../app/Helpers/helper.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4",
+        "php-di/php-di": "7.0.2",
+        "waxframework/framework": "1.0.0"
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "1.8.2",
+        "squizlabs/php_codesniffer": "3.7.2",
+        "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
+        "phpcompatibility/phpcompatibility-wp": "2.1.4"
+    },
+    "config": {
+        "vendor-dir": "vendor-src",
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "bamarni-bin": {
+            "target-directory": "vendor-src/vendor-bin"
+        }
+    },
+    "repositories": [
+		{
+			"type": "path",
+			"url": "/../framework"
+		}
+	]
+}
