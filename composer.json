@@ -3,15 +3,16 @@
     "description": "Wordpress plugin framework",
     "license": "MIT",
     "scripts": {
-        "generate": [
-			"composer install --no-cache",
-			"composer bin php-scoper require --dev humbug/php-scoper:0.17.5"
-		],
+        "setup": [
+            "composer install --no-cache",
+            "composer bin php-scoper require --dev humbug/php-scoper:0.17.5",
+            "composer add-prefix"
+        ],
         "scoper-init": "vendor-src/bin/php-scoper",
         "add-prefix": [
-			"vendor-src/bin/php-scoper add-prefix --output-dir vendor --force",
+            "vendor-src/bin/php-scoper add-prefix --output-dir vendor --force",
             "composer dump-autoload -d vendor"
-		]
+        ]
     },
     "autoload": {
         "psr-4": {
@@ -26,7 +27,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4",
-        "php-di/php-di": "7.0.2",
+        "php-di/php-di": "6.4.0",
         "waxframework/framework": "1.0.0"
     },
     "require-dev": {
@@ -48,9 +49,9 @@
         }
     },
     "repositories": [
-		{
-			"type": "path",
-			"url": "/../framework"
-		}
-	]
+        {
+            "type": "path",
+            "url": "./../framework"
+        }
+    ]
 }

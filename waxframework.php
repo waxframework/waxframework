@@ -2,6 +2,8 @@
 
 defined('ABSPATH') || exit;
 
+use WaxFramework\App;
+
 /**
  * Plugin Name:       PluginName
  * Description:       This plugin is build with WpCommander framework
@@ -17,19 +19,22 @@ defined('ABSPATH') || exit;
  * Domain Path:       /languages
  */
 
+require_once __DIR__ . '/vendor/vendor-src/autoload.php';
+require_once __DIR__ . '/vendor-src/autoload.php';
+
 class WaxFramework
 {
 	public static function load()
 	{
+		$application = App::instance();
+
 		/**
 		 * Fires once activated plugins have loaded.
 		 *
 		 */
-		add_action( 'plugins_loaded', function() : void {
-			error_log(__DIR__);
-			error_log(__FILE__);
-			error_log(trailingslashit(plugin_dir_url(__FILE__)));
-		} );
+		add_action('plugins_loaded', function () use ($application): void {
+			$application->load(__FILE__, __DIR__);
+		});
 	}
 }
 

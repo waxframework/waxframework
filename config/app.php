@@ -1,11 +1,17 @@
 <?php
 
+defined('ABSPATH') || exit;
+
+use WaxFramework\App\Providers\MenuServiceProvider;
+
 return [
-    'version' => '1.0.0',
+	'version' => '1.0.0',
 
-	'api-namespace'       => '{{plugin-api-namespace}}',
+	'api-namespace' => '{{plugin-api-namespace}}',
 
-	'providers'       => [],
+	'providers' => [],
 
-	'admin_providers' => []
+	'admin_providers' => [
+		MenuServiceProvider::class
+	]
 ];
