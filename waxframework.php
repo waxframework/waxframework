@@ -6,13 +6,13 @@ use WaxFramework\App;
 
 /**
  * Plugin Name:       PluginName
- * Description:       This plugin is build with WpCommander framework
+ * Description:       This plugin is build with Wax framework
  * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.4
  * Tested up to:      6.1.1
- * Author:            WpCommander
- * Author URI:        http://github.com/wpcommander
+ * Author:            SovWare
+ * Author URI:        http://github.com/sovware
  * License:           GPL v3 or later
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       pluginFileName
@@ -33,7 +33,13 @@ class WaxFramework
 		 *
 		 */
 		add_action('plugins_loaded', function () use ($application): void {
+
+			do_action('before_load_{{wax_plugin_name}}');
+
 			$application->load(__FILE__, __DIR__);
+
+			do_action('after_load_{{wax_plugin_name}}');
+
 		});
 	}
 }

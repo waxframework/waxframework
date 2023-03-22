@@ -41,7 +41,6 @@ return [
             ->ignoreVCS(true)
             ->notName('/LICENSE|.*\\.md|.*\\.dist|Makefile')
             ->exclude([
-                'bin',
                 'doc',
                 'test',
                 'test_old',

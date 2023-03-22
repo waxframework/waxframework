@@ -7,7 +7,15 @@ use WaxFramework\App\Providers\MenuServiceProvider;
 return [
 	'version' => '1.0.0',
 
-	'api-namespace' => '{{plugin-api-namespace}}',
+	'rest_api' => [
+		'namespace' => 'waxframework',
+		'versions' => []
+	],
+
+	'ajax_api' => [
+		'namespace' => 'waxframework',
+		'versions' => []
+	],
 
 	'providers' => [],
 
