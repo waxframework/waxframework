@@ -1,6 +1,7 @@
 {
     "name": "waxframework/waxframework",
     "description": "Wordpress plugin framework",
+    "type": "project",
     "license": "MIT",
     "scripts": {
         "setup": [
