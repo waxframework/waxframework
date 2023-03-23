@@ -1,7 +1,6 @@
 <?php
 
-defined('ABSPATH') || exit;
-
+use WaxFramework\App\Http\Middleware\EnsureIsUserAdmin;
 use WaxFramework\App\Providers\MenuServiceProvider;
 
 return [
@@ -21,5 +20,9 @@ return [
 
 	'admin_providers' => [
 		MenuServiceProvider::class
+	],
+
+	'middleware' => [
+		'admin' => EnsureIsUserAdmin::class
 	]
 ];

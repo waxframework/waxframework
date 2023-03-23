@@ -5,4 +5,4 @@ use WaxFramework\Routing\Route;
 
 defined('ABSPATH') || exit;
 
-Route::get('user', [UserController::class, 'index']);
+Route::get('user', [UserController::class, 'index'], ['admin']);

@@ -2,6 +2,6 @@
 
 use WaxFramework\App\Http\Controllers\UserController;
 
-use WaxFramework\Request\Route\Ajax;
+use WaxFramework\Routing\Ajax;
 
-Ajax::get('user', [UserController::class, 'index']);
+Ajax::get('user/{id}', [UserController::class, 'index'], ['admin']);
