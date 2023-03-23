@@ -47,7 +47,7 @@ return [
                 'tests',
                 'Tests',
                 'vendor-bin',
-                'waxframework/framework'
+                'waxframework'
             ])
             ->in('vendor-src'),
         Finder::create()->append([

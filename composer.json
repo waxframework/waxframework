@@ -53,6 +53,10 @@
         {
             "type": "path",
             "url": "./../framework"
+        },
+        {
+            "type": "path",
+            "url": "./../routing"
         }
     ]
 }

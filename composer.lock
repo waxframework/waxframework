@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36073da080ebb0c47569f588a369943a",
+    "content-hash": "9d9b2b2acc2df45955a7859d05fc07f9",
     "packages": [
         {
             "name": "laravel/serializable-closure",
@@ -294,7 +294,17 @@
             "dist": {
                 "type": "path",
                 "url": "./../framework",
-                "reference": "b8fcb2944aa696dd8e8b649f14cb2e269393a641"
+                "reference": "fcb814eb40a20f982d482a843c2d1cf0882c5450"
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "1.8.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
+                "phpcompatibility/phpcompatibility-wp": "2.1.4",
+                "squizlabs/php_codesniffer": "3.7.2",
+                "wp-coding-standards/wpcs": "^2.3"
             },
             "type": "library",
             "autoload": {
@@ -302,6 +312,38 @@
                     "WaxFramework\\": "src/"
                 }
             },
+            "scripts": {
+                "format": [
+                    "vendor/bin/phpcbf --standard=phpcs.xml"
+                ],
+                "phpcs": [
+                    "vendor/bin/phpcs --standard=phpcs.xml --report-full --report-checkstyle=./phpcs-report.xml"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "waxframework/routing",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "./../routing",
+                "reference": "1ff83ff54e5c766f64b74a588681f5289f1c9ca5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WaxFramework\\Routing\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
             "transport-options": {
                 "relative": true
             }

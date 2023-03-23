@@ -2,7 +2,7 @@
 
 namespace WaxFramework\App\Http\Controllers;
 
-use WaxFramework\Request\Response;
+use WaxFramework\Routing\Response;
 
 class UserController extends Controller
 {
