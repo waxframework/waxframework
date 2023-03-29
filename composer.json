@@ -25,6 +25,12 @@
             "./../app/Helpers/helper.php"
         ]
     },
+    "authors": [
+        {
+            "name": "MD AL AMIN",
+            "email": "mdalaminbey@gmail.com"
+        }
+    ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4",
