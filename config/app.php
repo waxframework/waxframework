@@ -7,12 +7,12 @@ return [
 	'version' => '1.0.0',
 
 	'rest_api' => [
-		'namespace' => 'waxframework',
+		'namespace' => 'myplugin',
 		'versions' => []
 	],
 
 	'ajax_api' => [
-		'namespace' => 'waxframework',
+		'namespace' => 'myplugin',
 		'versions' => []
 	],
 

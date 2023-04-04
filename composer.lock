@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d9b2b2acc2df45955a7859d05fc07f9",
+    "content-hash": "f8ff6a3b5b044edf15267288e548c3f0",
     "packages": [
         {
             "name": "laravel/serializable-closure",
@@ -289,15 +289,44 @@
             "time": "2021-11-05T16:50:12+00:00"
         },
         {
+            "name": "waxframework/database",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "./../database",
+                "reference": "5c405b7d27b983103d4423569406b6bb43683956"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WaxFramework\\Database\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MD AL AMIN",
+                    "email": "mdalaminbey@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "waxframework/framework",
             "version": "1.0.0",
             "dist": {
                 "type": "path",
                 "url": "./../framework",
-                "reference": "fcb814eb40a20f982d482a843c2d1cf0882c5450"
+                "reference": "fa43d421b86f418ed478d03b806020f550c356c4"
             },
             "require": {
-                "php": ">=7.4"
+                "php": ">=7.4",
+                "waxframework/database": "1.0.0",
+                "waxframework/routing": "1.0.0"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "1.8.2",
@@ -323,6 +352,12 @@
             "license": [
                 "MIT"
             ],
+            "authors": [
+                {
+                    "name": "MD AL AMIN",
+                    "email": "mdalaminbey@gmail.com"
+                }
+            ],
             "transport-options": {
                 "relative": true
             }
@@ -333,7 +368,14 @@
             "dist": {
                 "type": "path",
                 "url": "./../routing",
-                "reference": "1ff83ff54e5c766f64b74a588681f5289f1c9ca5"
+                "reference": "3de1d1ae4de3e2360ff8e13f52590753297f2349"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "1.8.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
+                "phpcompatibility/phpcompatibility-wp": "2.1.4",
+                "squizlabs/php_codesniffer": "3.7.2",
+                "wp-coding-standards/wpcs": "^2.3"
             },
             "type": "library",
             "autoload": {
@@ -341,8 +383,22 @@
                     "WaxFramework\\Routing\\": "src/"
                 }
             },
+            "scripts": {
+                "format": [
+                    "vendor/bin/phpcbf --standard=phpcs.xml"
+                ],
+                "phpcs": [
+                    "vendor/bin/phpcs --standard=phpcs.xml --report-full --report-checkstyle=./phpcs-report.xml"
+                ]
+            },
             "license": [
                 "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MD AL AMIN",
+                    "email": "mdalaminbey@gmail.com"
+                }
             ],
             "transport-options": {
                 "relative": true
