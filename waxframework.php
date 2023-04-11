@@ -22,7 +22,7 @@ use MyPluginNamespace\WaxFramework\App;
 require_once __DIR__ . '/vendor/vendor-src/autoload.php';
 require_once __DIR__ . '/app/Helpers/helper.php';
 
-class MyPluginName
+class MyPluginClass
 {
     public static function load() {
         $application = App::instance();
@@ -34,14 +34,14 @@ class MyPluginName
         add_action(
             'plugins_loaded', function () use ( $application ): void {
 
-                do_action( 'before_load_my_plugin_hook' );
+                do_action( 'before/load/my_plugin_hook' );
 
                 $application->load( __FILE__, __DIR__ );
 
-                do_action( 'after_load_my_plugin_hook' );
+                do_action( 'after/load/my_plugin_hook' );
             }
         );
     }
 }
 
-MyPluginName::load();
+MyPluginClass::load();
