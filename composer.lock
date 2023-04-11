@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8ff6a3b5b044edf15267288e548c3f0",
+    "content-hash": "380a8b6065b25d16451a885149947ecc",
     "packages": [
         {
             "name": "laravel/serializable-closure",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "8746f27d79cb4412907b3e42f7d6a5e0630c0463"
+                "reference": "5c1e047e38fee0cb8fbbe1ed4439ebfd96f64986"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/8746f27d79cb4412907b3e42f7d6a5e0630c0463",
-                "reference": "8746f27d79cb4412907b3e42f7d6a5e0630c0463",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/5c1e047e38fee0cb8fbbe1ed4439ebfd96f64986",
+                "reference": "5c1e047e38fee0cb8fbbe1ed4439ebfd96f64986",
                 "shasum": ""
             },
             "require": {
@@ -65,7 +65,7 @@
                 "issues": "https://github.com/laravel/serializable-closure/issues",
                 "source": "https://github.com/laravel/serializable-closure"
             },
-            "time": "2023-01-31T15:54:08+00:00"
+            "time": "2023-04-08T16:37:35+00:00"
         },
         {
             "name": "php-di/invoker",
@@ -290,18 +290,33 @@
         },
         {
             "name": "waxframework/database",
-            "version": "1.0.0",
-            "dist": {
-                "type": "path",
-                "url": "./../database",
-                "reference": "5c405b7d27b983103d4423569406b6bb43683956"
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sovware/database.git",
+                "reference": "c2424f5b7ebbb6ee99310414b7a50f802733530c"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sovware/database/zipball/c2424f5b7ebbb6ee99310414b7a50f802733530c",
+                "reference": "c2424f5b7ebbb6ee99310414b7a50f802733530c",
+                "shasum": ""
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "1.8.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
+                "phpcompatibility/phpcompatibility-wp": "2.1.4",
+                "squizlabs/php_codesniffer": "3.7.2",
+                "wp-coding-standards/wpcs": "^2.3"
+            },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "WaxFramework\\Database\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -311,22 +326,30 @@
                     "email": "mdalaminbey@gmail.com"
                 }
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/sovware/database/issues",
+                "source": "https://github.com/sovware/database/tree/master"
+            },
+            "time": "2023-04-11T07:46:11+00:00"
         },
         {
             "name": "waxframework/framework",
-            "version": "1.0.0",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sovware/framework.git",
+                "reference": "043f61b8ac70250f11e204ab5ec816ce7748ecc4"
+            },
             "dist": {
-                "type": "path",
-                "url": "./../framework",
-                "reference": "fa43d421b86f418ed478d03b806020f550c356c4"
+                "type": "zip",
+                "url": "https://api.github.com/repos/sovware/framework/zipball/043f61b8ac70250f11e204ab5ec816ce7748ecc4",
+                "reference": "043f61b8ac70250f11e204ab5ec816ce7748ecc4",
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
-                "waxframework/database": "1.0.0",
-                "waxframework/routing": "1.0.0"
+                "waxframework/database": "dev-master",
+                "waxframework/routing": "dev-master"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "1.8.2",
@@ -335,20 +358,14 @@
                 "squizlabs/php_codesniffer": "3.7.2",
                 "wp-coding-standards/wpcs": "^2.3"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "WaxFramework\\": "src/"
                 }
             },
-            "scripts": {
-                "format": [
-                    "vendor/bin/phpcbf --standard=phpcs.xml"
-                ],
-                "phpcs": [
-                    "vendor/bin/phpcs --standard=phpcs.xml --report-full --report-checkstyle=./phpcs-report.xml"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -358,17 +375,25 @@
                     "email": "mdalaminbey@gmail.com"
                 }
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/sovware/framework/issues",
+                "source": "https://github.com/sovware/framework/tree/master"
+            },
+            "time": "2023-04-10T10:11:29+00:00"
         },
         {
             "name": "waxframework/routing",
-            "version": "1.0.0",
-            "dist": {
-                "type": "path",
-                "url": "./../routing",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sovware/routing.git",
                 "reference": "3de1d1ae4de3e2360ff8e13f52590753297f2349"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sovware/routing/zipball/3de1d1ae4de3e2360ff8e13f52590753297f2349",
+                "reference": "3de1d1ae4de3e2360ff8e13f52590753297f2349",
+                "shasum": ""
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "1.8.2",
@@ -377,20 +402,14 @@
                 "squizlabs/php_codesniffer": "3.7.2",
                 "wp-coding-standards/wpcs": "^2.3"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "WaxFramework\\Routing\\": "src/"
                 }
             },
-            "scripts": {
-                "format": [
-                    "vendor/bin/phpcbf --standard=phpcs.xml"
-                ],
-                "phpcs": [
-                    "vendor/bin/phpcs --standard=phpcs.xml --report-full --report-checkstyle=./phpcs-report.xml"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -400,9 +419,11 @@
                     "email": "mdalaminbey@gmail.com"
                 }
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/sovware/routing/issues",
+                "source": "https://github.com/sovware/routing/tree/master"
+            },
+            "time": "2023-03-29T06:51:46+00:00"
         }
     ],
     "packages-dev": [
@@ -771,11 +792,64 @@
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
             "time": "2023-02-22T23:07:41+00:00"
+        },
+        {
+            "name": "wp-coding-standards/wpcs",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
+                "reference": "7da1894633f168fe244afc6de00d141f27517b62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/7da1894633f168fe244afc6de00d141f27517b62",
+                "reference": "7da1894633f168fe244afc6de00d141f27517b62",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "squizlabs/php_codesniffer": "^3.3.1"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5 || ^0.6",
+                "phpcompatibility/php-compatibility": "^9.0",
+                "phpcsstandards/phpcsdevtools": "^1.0",
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "suggest": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically."
+            },
+            "type": "phpcodesniffer-standard",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/WordPress/WordPress-Coding-Standards/graphs/contributors"
+                }
+            ],
+            "description": "PHP_CodeSniffer rules (sniffs) to enforce WordPress coding conventions",
+            "keywords": [
+                "phpcs",
+                "standards",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/WordPress/WordPress-Coding-Standards/issues",
+                "source": "https://github.com/WordPress/WordPress-Coding-Standards",
+                "wiki": "https://github.com/WordPress/WordPress-Coding-Standards/wiki"
+            },
+            "time": "2020-05-13T23:57:56+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "waxframework/framework": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

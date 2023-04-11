@@ -1,8 +1,8 @@
 <?php
 
-namespace WaxFramework\App\Http\Middleware;
+namespace MyPluginNamespace\App\Http\Middleware;
 
-use WaxFramework\Routing\Contracts\Middleware;
+use MyPluginNamespace\WaxFramework\Routing\Contracts\Middleware;
 use WP_REST_Request;
 
 class EnsureIsUserAdmin implements Middleware

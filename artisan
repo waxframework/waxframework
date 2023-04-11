@@ -1,0 +1,7 @@
+<?php
+
+require_once dirname(__DIR__, 1) . '/artisan/vendor/autoload.php';
+
+$artisan = new WaxFramework\Artisan\Artisan(__DIR__);
+
+$artisan->execute();

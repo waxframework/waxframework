@@ -3,27 +3,26 @@
     "description": "Wordpress plugin framework",
     "type": "project",
     "license": "MIT",
+    "version": "1.0.0",
     "scripts": {
         "setup": [
             "composer install --no-cache",
             "composer bin php-scoper require --dev humbug/php-scoper:0.17.5",
             "composer add-prefix"
         ],
-        "scoper-init": "vendor-src/bin/php-scoper",
         "add-prefix": [
             "vendor-src/bin/php-scoper add-prefix --output-dir vendor --force",
             "composer dump-autoload -d vendor"
-        ]
+        ],
+        "format": "vendor/vendor-src/bin/phpcbf --standard=phpcs.xml",
+        "phpcs": "vendor/vendor-src/bin/phpcs --standard=phpcs.xml --report-full --report-checkstyle=./phpcs-report.xml"
     },
     "autoload": {
         "psr-4": {
             "App\\": "./../app/",
             "Bootstrap\\": "./../bootstrap/",
             "Database\\": "./../database/"
-        },
-        "files": [
-            "./../app/Helpers/helper.php"
-        ]
+        }
     },
     "authors": [
         {
@@ -35,13 +34,14 @@
     "require": {
         "php": ">=7.4",
         "php-di/php-di": "6.4.0",
-        "waxframework/framework": "1.0.0"
+        "waxframework/framework": "dev-master"
     },
     "require-dev": {
         "bamarni/composer-bin-plugin": "1.8.2",
         "squizlabs/php_codesniffer": "3.7.2",
         "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
-        "phpcompatibility/phpcompatibility-wp": "2.1.4"
+        "phpcompatibility/phpcompatibility-wp": "2.1.4",
+        "wp-coding-standards/wpcs": "^2.3"
     },
     "config": {
         "vendor-dir": "vendor-src",
@@ -54,19 +54,5 @@
         "bamarni-bin": {
             "target-directory": "vendor-src/vendor-bin"
         }
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./../framework"
-        },
-        {
-            "type": "path",
-            "url": "./../routing"
-        },
-        {
-            "type": "path",
-            "url": "./../database"
-        }
-    ]
+    }
 }

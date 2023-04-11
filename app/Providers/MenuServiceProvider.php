@@ -1,8 +1,8 @@
 <?php
 
-namespace WaxFramework\App\Providers;
+namespace MyPluginNamespace\App\Providers;
 
-use WaxFramework\Contracts\Provider;
+use MyPluginNamespace\WaxFramework\Contracts\Provider;
 
 class MenuServiceProvider implements Provider
 {

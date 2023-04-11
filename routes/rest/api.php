@@ -1,7 +1,7 @@
 <?php
 
-use WaxFramework\App\Http\Controllers\UserController;
-use WaxFramework\Routing\Route;
+use MyPluginNamespace\App\Http\Controllers\UserController;
+use MyPluginNamespace\WaxFramework\Routing\Route;
 
 defined('ABSPATH') || exit;
 

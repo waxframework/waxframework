@@ -1,18 +1,18 @@
 <?php
 
-use WaxFramework\App\Http\Middleware\EnsureIsUserAdmin;
-use WaxFramework\App\Providers\MenuServiceProvider;
+use MyPluginNamespace\App\Http\Middleware\EnsureIsUserAdmin;
+use MyPluginNamespace\App\Providers\MenuServiceProvider;
 
 return [
 	'version' => '1.0.0',
 
 	'rest_api' => [
-		'namespace' => 'myplugin',
+		'namespace' => 'MyPluginApiNamespace',
 		'versions' => []
 	],
 
 	'ajax_api' => [
-		'namespace' => 'myplugin',
+		'namespace' => 'MyPluginApiNamespace',
 		'versions' => []
 	],
 

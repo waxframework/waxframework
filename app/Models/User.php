@@ -1,21 +1,18 @@
 <?php
 
-namespace WaxFramework\App\Models;
+namespace MyPluginNamespace\App\Models;
 
-use WaxFramework\Database\Eloquent\Model;
-use WaxFramework\Database\Eloquent\Relations\HasMany;
-use WaxFramework\Database\Eloquent\Relations\HasOne;
+use MyPluginNamespace\WaxFramework\App;
+use MyPluginNamespace\WaxFramework\Database\Eloquent\Model;
+use MyPluginNamespace\WaxFramework\Database\Resolver;
 
 class User extends Model {
+
 	public static function get_table_name():string {
 		return 'users';
 	}
 
-	public function post(): HasOne {
-		return $this->hasOne(Post::class, 'post_author', 'ID');
-	}
-
-	public function meta(): HasMany {
-		return $this->hasMany(UserMeta::class, 'user_id', 'ID');
+	public function resolver():Resolver {
+		return App::$container->get(Resolver::class);
 	}
 }

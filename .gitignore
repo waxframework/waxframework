@@ -8,3 +8,4 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+phpcs-report.xml

@@ -1,5 +1,5 @@
 <?php
 
-namespace WaxFramework\App\Http\Controllers;
+namespace MyPluginNamespace\App\Http\Controllers;
 
-class Controller extends \WaxFramework\Contracts\Controller {}
+class Controller extends \MyPluginNamespace\WaxFramework\Contracts\Controller {}
