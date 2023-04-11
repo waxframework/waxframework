@@ -1,28 +1,30 @@
 <?php
 
+defined( 'ABSPATH' ) || exit;
+
 use MyPluginNamespace\App\Http\Middleware\EnsureIsUserAdmin;
 use MyPluginNamespace\App\Providers\MenuServiceProvider;
 
 return [
-	'version' => '1.0.0',
+    'version'         => '1.0.0',
 
-	'rest_api' => [
-		'namespace' => 'MyPluginApiNamespace',
-		'versions' => []
-	],
+    'rest_api'        => [
+        'namespace' => 'MyPluginApiNamespace',
+        'versions'  => []
+    ],
 
-	'ajax_api' => [
-		'namespace' => 'MyPluginApiNamespace',
-		'versions' => []
-	],
+    'ajax_api'        => [
+        'namespace' => 'MyPluginApiNamespace',
+        'versions'  => []
+    ],
 
-	'providers' => [],
+    'providers'       => [],
 
-	'admin_providers' => [
-		MenuServiceProvider::class
-	],
+    'admin_providers' => [
+        MenuServiceProvider::class
+    ],
 
-	'middleware' => [
-		'admin' => EnsureIsUserAdmin::class
-	]
+    'middleware'      => [
+        'admin' => EnsureIsUserAdmin::class
+    ]
 ];

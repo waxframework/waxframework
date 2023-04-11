@@ -33,6 +33,7 @@
 	<!-- exclude folders -->
 	<exclude-pattern>.github/*</exclude-pattern>
 	<exclude-pattern>.idea/*</exclude-pattern>
+	<exclude-pattern>node_modules/*</exclude-pattern>
 	<exclude-pattern>vendor/*</exclude-pattern>
 	<exclude-pattern>vendor-src/*</exclude-pattern>
 	<exclude-pattern>node_modues/*</exclude-pattern>

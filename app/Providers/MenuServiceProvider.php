@@ -6,7 +6,6 @@ use MyPluginNamespace\WaxFramework\Contracts\Provider;
 
 class MenuServiceProvider implements Provider
 {
-	public function boot()
-	{
-	}
+    public function boot() {
+    }
 }

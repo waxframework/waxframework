@@ -3,6 +3,6 @@
 use MyPluginNamespace\App\Http\Controllers\UserController;
 use MyPluginNamespace\WaxFramework\Routing\Route;
 
-defined('ABSPATH') || exit;
+defined( 'ABSPATH' ) || exit;
 
-Route::get('user', [UserController::class, 'index'], ['admin']);
+Route::get( 'user', [UserController::class, 'index'], ['admin'] );
