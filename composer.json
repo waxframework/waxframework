@@ -35,10 +35,10 @@
     "require": {
         "php": ">=7.4",
         "php-di/php-di": "6.4.0",
-        "waxframework/framework": "dev-master"
+        "waxframework/framework": "^1.0.0"
     },
     "require-dev": {
-        "waxframework/artisan": "dev-master",
+        "waxframework/artisan": "^1.0.0",
         "bamarni/composer-bin-plugin": "1.8.2",
         "squizlabs/php_codesniffer": "3.7.2",
         "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
