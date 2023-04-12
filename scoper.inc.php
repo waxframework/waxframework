@@ -13,13 +13,27 @@ use Isolated\Symfony\Component\Finder\Finder;
 
 // Example of collecting files to include in the scoped build but to not scope
 // leveraging the isolated finder.
-// $excludedFiles = array_map(
-//     static fn(SplFileInfo $fileInfo) => $fileInfo->getPathName(),
-//     iterator_to_array(
-//         Finder::create()->files()->in(__DIR__),
-//         false,
-//     ),
-// );
+$polyfillsBootstraps = array_map(
+    static fn (SplFileInfo $fileInfo) => $fileInfo->getPathname(),
+    iterator_to_array(
+        Finder::create()
+            ->files()
+            ->in(__DIR__ . '/vendor-src/symfony/polyfill-*')
+            ->name('bootstrap*.php'),
+        false,
+    ),
+);
+
+$polyfillsStubs = array_map(
+    static fn (SplFileInfo $fileInfo) => $fileInfo->getPathname(),
+    iterator_to_array(
+        Finder::create()
+            ->files()
+            ->in(__DIR__ . '/vendor-src/symfony/polyfill-*/Resources/stubs')
+            ->name('*.php'),
+        false,
+    ),
+);
 
 return [
     // The prefix configuration. If a non-null value is used, a random prefix
@@ -65,7 +79,8 @@ return [
     // For more see: https://github.com/humbug/php-scoper/blob/master/docs/configuration.md#patchers
     'exclude-files'           => [
         // 'src/an-excluded-file.php',
-        // ...$excludedFiles,
+        ...$polyfillsBootstraps,
+        ...$polyfillsStubs,
     ],
 
     // When scoping PHP files, there will be scenarios where some of the code being scoped indirectly references the
