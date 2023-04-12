@@ -106,7 +106,8 @@ return [
         // '~^$~',                        // The root namespace only
         'Elementor',
         'PHP_CodeSniffer',
-        'PHPCompatibility'
+        'PHPCompatibility',
+        'Symfony\Polyfill'
     ],
     'exclude-classes'         => [
         'WP_REST_Request',
@@ -117,6 +118,7 @@ return [
         // 'mb_str_split',
     ],
     'exclude-constants'       => [
+        '/^SYMFONY\_[\p{L}_]+$/',
         // 'STDIN',
     ],
 
