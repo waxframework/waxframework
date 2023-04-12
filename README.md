@@ -36,10 +36,10 @@ Run this command to see all available command lists
 php artisan
 ```
 ## Routing
-<a href="">Routing Documentation</a>
+<a href="https://github.com/sovware/routing">Routing Documentation</a>
 
 ## Database
-<a href="">Database Documentation</a>
+<a href="https://github.com/sovware/database">Database Documentation</a>
 
 ## Regenerate Vendor Directory
 To re-generate vendor folder don't use `composer install` / `php artisan app:setup`
