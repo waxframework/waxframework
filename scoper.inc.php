@@ -13,24 +13,24 @@ use Isolated\Symfony\Component\Finder\Finder;
 
 // Example of collecting files to include in the scoped build but to not scope
 // leveraging the isolated finder.
-$polyfillsBootstraps = array_map(
-    static fn (SplFileInfo $fileInfo) => $fileInfo->getPathname(),
+$polyfills_bootstraps = array_map(
+    static fn ( SplFileInfo $file_info ) => $file_info->getPathname(),
     iterator_to_array(
         Finder::create()
             ->files()
-            ->in(__DIR__ . '/vendor-src/symfony/polyfill-*')
-            ->name('bootstrap*.php'),
+            ->in( __DIR__ . '/vendor-src/symfony/polyfill-*' )
+            ->name( 'bootstrap*.php' ),
         false,
     ),
 );
 
-$polyfillsStubs = array_map(
-    static fn (SplFileInfo $fileInfo) => $fileInfo->getPathname(),
+$polyfills_stubs = array_map(
+    static fn ( SplFileInfo $file_info ) => $file_info->getPathname(),
     iterator_to_array(
         Finder::create()
             ->files()
-            ->in(__DIR__ . '/vendor-src/symfony/polyfill-*/Resources/stubs')
-            ->name('*.php'),
+            ->in( __DIR__ . '/vendor-src/symfony/polyfill-*/Resources/stubs' )
+            ->name( '*.php' ),
         false,
     ),
 );
@@ -79,8 +79,8 @@ return [
     // For more see: https://github.com/humbug/php-scoper/blob/master/docs/configuration.md#patchers
     'exclude-files'           => [
         // 'src/an-excluded-file.php',
-        ...$polyfillsBootstraps,
-        ...$polyfillsStubs,
+        ...$polyfills_bootstraps,
+        ...$polyfills_stubs,
     ],
 
     // When scoping PHP files, there will be scenarios where some of the code being scoped indirectly references the
