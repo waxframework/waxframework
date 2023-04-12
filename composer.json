@@ -7,9 +7,10 @@
     "scripts": {
         "setup": [
             "composer install --no-cache",
-            "composer bin php-scoper require --dev humbug/php-scoper:0.17.5",
+            "composer humbug/php-scoper",
             "composer add-prefix"
         ],
+        "humbug/php-scoper": "composer bin php-scoper require --dev humbug/php-scoper:0.17.5",
         "add-prefix": [
             "vendor-src/bin/php-scoper add-prefix --output-dir vendor --force",
             "composer dump-autoload -d vendor"
