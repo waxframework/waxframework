@@ -111,7 +111,9 @@ return [
     ],
     'exclude-classes'         => [
         'WP_REST_Request',
-        'wpdb'
+        'WP_REST_Server',
+        'wpdb',
+        'WP',
         // 'ReflectionClassConstant',
     ],
     'exclude-functions'       => [
