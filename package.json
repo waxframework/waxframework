@@ -9,7 +9,7 @@
   "scripts": {
     "start": "wp-scripts start",
     "start:hot": "wp-scripts start --hot",
-    "minify": "wp-scripts build"
+    "build": "wp-scripts build"
   },
   "repository": {
     "type": "git",

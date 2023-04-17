@@ -6,12 +6,12 @@ const devHost = 'waxframework.test';
 module.exports = {
 	...defaultConfig,
 	entry: {
-		'js/app.js': './resources/js/app.js',
-		'css/app.css': './resources/sass/app.scss',
+		'js/app': './resources/js/app.js',
+		'css/app': './resources/sass/app.scss',
 	},
 	output: {
 		path: path.resolve(__dirname, './assets/'),
-		filename: '[name]',
+		filename: '[name].js',
 		clean: false,
 	},
 	devServer: {
@@ -29,5 +29,5 @@ module.exports = {
 			},
 		},
 		headers: { 'Access-Control-Allow-Origin': '*' },
-	},
+	}
 };

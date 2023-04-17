@@ -9,3 +9,6 @@ yarn-error.log
 /.idea
 /.vscode
 phpcs-report.xml
+/assets/**/*.hot-update.*
+/assets/**/*.js.map
+/assets/css/*.js
