@@ -38,7 +38,6 @@ class MyPluginClass
 
                 $application->load( __FILE__, __DIR__ );
 
-                error_log( print_r( my_plugin_hook_config( 'app' ), true ) );
                 do_action( 'after_load_my_plugin_hook' );
             }
         );
