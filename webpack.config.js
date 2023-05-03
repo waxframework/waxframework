@@ -10,7 +10,7 @@ module.exports = {
 		'css/app': './resources/sass/app.scss',
 	},
 	output: {
-		path: path.resolve(__dirname, './assets/'),
+		path: path.resolve(__dirname, './assets/build/'),
 		filename: '[name].js',
 		clean: false,
 	},
@@ -22,9 +22,9 @@ module.exports = {
 		port: 8887,
 		host: devHost,
 		proxy: {
-			'/assets': {
+			'/assets/build': {
 				pathRewrite: {
-					'^/assets': '',
+					'^/assets/build': '',
 				},
 			},
 		},
