@@ -68,6 +68,7 @@ return [
         Finder::create()->append(
             [
                 'composer.json',
+                'composer.lock'
             ]
         )
 
@@ -78,7 +79,7 @@ return [
     //
     // For more see: https://github.com/humbug/php-scoper/blob/master/docs/configuration.md#patchers
     'exclude-files'           => [
-        // 'src/an-excluded-file.php',
+        __DIR__ . '/vendor-src/php-di/php-di/src/Compiler/Template.php',
         ...$polyfills_bootstraps,
         ...$polyfills_stubs,
     ],
