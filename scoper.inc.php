@@ -119,7 +119,7 @@ return [
         // 'ReflectionClassConstant',
     ],
     'exclude-functions'       => [
-        // 'mb_str_split',
+        'get_plugin_data'
     ],
     'exclude-constants'       => [
         '/^SYMFONY\_[\p{L}_]+$/',
