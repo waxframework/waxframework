@@ -5,19 +5,22 @@
     "license": "MIT",
     "version": "1.0.0",
     "scripts": {
-        "setup": [
-            "composer install --no-cache",
-            "composer humbug/php-scoper",
-            "composer add-prefix"
-        ],
-        "humbug/php-scoper": "composer bin php-scoper require --dev humbug/php-scoper:0.17.5",
-        "add-prefix": [
-            "vendor-src/bin/php-scoper add-prefix --output-dir vendor --force",
-            "composer dump-autoload -d vendor"
-        ],
-        "format": "vendor/vendor-src/bin/phpcbf --standard=phpcs.xml",
-        "phpcs": "vendor/vendor-src/bin/phpcs --standard=phpcs.xml --report-full --report-checkstyle=./phpcs-report.xml"
-    },
+		"setup": [
+			"composer install --no-cache",
+			"composer humbug/php-scoper",
+			"composer add-prefix"
+		],
+		"build": [
+			"composer -d vendor --no-plugins --no-interaction install --no-scripts --no-dev"
+		],
+		"humbug/php-scoper": "composer bin php-scoper require --dev humbug/php-scoper:0.17.5",
+		"add-prefix": [
+			"vendor-src/bin/php-scoper add-prefix --output-dir vendor --force",
+			"composer dump-autoload -d vendor"
+		],
+		"format": "vendor/vendor-src/bin/phpcbf --standard=phpcs.xml",
+		"phpcs": "vendor/vendor-src/bin/phpcs --standard=phpcs.xml"
+	},
     "autoload": {
         "psr-4": {
             "App\\": "./../app/",
