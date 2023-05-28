@@ -22,9 +22,18 @@ use MyPluginNamespace\WaxFramework\App;
 require_once __DIR__ . '/vendor/vendor-src/autoload.php';
 require_once __DIR__ . '/app/Helpers/helper.php';
 
-class MyPluginClass
+final class MyPluginClass
 {
-    public static function load() {
+    public static MyPluginClass $instance;
+
+    public static function instance(): MyPluginClass {
+        if ( empty( self::$instance ) ) {
+            self::$instance = new self;
+        }
+        return self::$instance;
+    }
+
+    public function load() {
         $application = App::instance();
 
         /**
@@ -44,4 +53,4 @@ class MyPluginClass
     }
 }
 
-MyPluginClass::load();
+MyPluginClass::instance()->load();
