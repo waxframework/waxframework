@@ -10,7 +10,7 @@ module.exports = {
 		'css/app': './resources/sass/app.scss',
 	},
 	output: {
-		path: path.resolve(__dirname, './assets/build/'),
+		path: path.resolve( __dirname, './assets/build/' ),
 		filename: '[name].js',
 		clean: false,
 	},

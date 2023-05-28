@@ -7,7 +7,7 @@ use MyPluginNamespace\App\Providers\MenuServiceProvider;
 use MyPluginNamespace\Database\Migrations\TestMigration;
 
 return [
-    'version'                 => '1.0.0',
+    'version'                 => get_plugin_data( App::$plugin_root_file )['Version'],
 
     'rest_api'                => [
         'namespace' => 'MyPluginApiNamespace',

@@ -37,6 +37,7 @@
 	<exclude-pattern>vendor/*</exclude-pattern>
 	<exclude-pattern>vendor-src/*</exclude-pattern>
 	<exclude-pattern>node_modues/*</exclude-pattern>
+	<exclude-pattern>__build/*</exclude-pattern>
 	<exclude-pattern>assets/*</exclude-pattern>
 	<!-- ... -->
 
