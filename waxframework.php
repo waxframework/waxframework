@@ -36,6 +36,8 @@ final class MyPluginClass
     public function load() {
         $application = App::instance();
 
+        $application->boot( __FILE__, __DIR__ );
+
         /**
          * Fires once activated plugins have loaded.
          *
@@ -45,7 +47,7 @@ final class MyPluginClass
 
                 do_action( 'before_load_my_plugin_hook' );
 
-                $application->load( __FILE__, __DIR__ );
+                $application->load();
 
                 do_action( 'after_load_my_plugin_hook' );
             }
