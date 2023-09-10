@@ -114,6 +114,7 @@ return [
         'WP_HTTP_Response',
         'WP_REST_Request',
         'WP_REST_Server',
+        'WP_Error',
         'wpdb',
         'WP',
         // 'ReflectionClassConstant',
